@@ -3,7 +3,7 @@
 import axios from 'axios'
 import qs from 'qs'
 
-const django_host = 'http://47.101.190.44:8000'
+const django_host = 'https://47.101.190.44:8000'
 
 axios.interceptors.request.use(config => {
     // loading

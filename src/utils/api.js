@@ -1,8 +1,8 @@
 import http from '../utils/http'
 
 
-export const hpImgPath = 'http://47.101.190.44:8000/hp'
-export const baseUrl = 'http://47.101.190.44:8000'
+export const hpImgPath = 'https://47.101.190.44:8000/hp'
+export const baseUrl = 'https://47.101.190.44:8000'
 
 export const getBanners = () => http.get('/hp/banner');
 
