@@ -3,6 +3,8 @@
 import axios from 'axios'
 import qs from 'qs'
 
+const django_host = 'http://47.101.190.44:8000'
+
 axios.interceptors.request.use(config => {
     // loading
     return config
@@ -46,7 +48,7 @@ export default {
     post(url, data) {
         return axios({
             method: 'post',
-            baseURL: 'http://127.0.0.1:8000',
+            baseURL: django_host,
             url,
             data: JSON.stringify(data),
             timeout: 10000,
@@ -67,7 +69,7 @@ export default {
     post_with_headers(url, data, headers) {
         return axios({
             method: 'post',
-            baseURL: 'http://127.0.0.1:8000',
+            baseURL: django_host,
             url,
             data: qs.stringify(data),
             timeout: 10000,
@@ -85,7 +87,7 @@ export default {
     get(url, params) {
         return axios({
             method: 'get',
-            baseURL: 'http://127.0.0.1:8000',
+            baseURL: django_host,
             url,
             params, // get 请求时带的参数
             timeout: 10000,
@@ -105,7 +107,7 @@ export default {
     get_with_headers(url, params, headers) {
         return axios({
             method: 'get',
-            baseURL: 'http://127.0.0.1:8000',
+            baseURL: django_host,
             url,
             params, // get 请求时带的参数
             timeout: 10000,
