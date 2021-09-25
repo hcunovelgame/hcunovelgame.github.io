@@ -70,6 +70,7 @@ export default {
         return axios({
             method: 'post',
             baseURL: django_host,
+
             url,
             data: qs.stringify(data),
             timeout: 10000,
